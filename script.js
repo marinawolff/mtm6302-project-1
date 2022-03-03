@@ -46,47 +46,63 @@ const data = {
     ],
   }
 
-const $form = document.getElementById('form');
+const $addIdea = document.getElementById('form');
 const $completed = document.getElementById('completed');
 const $list = document.getElementById('list');
 
-//User innerHTML on list variable to add content
+//add html dinamcally to the browser
+function listData(){
+  const html = []
 
-function allList(){
-    //Create a data array
-    const dataList = []
-
-    //use loop to interate over content
-    for(let i = 0; i < 7; i++ ){
-        dataList.push(`<li class="ideasBox">
-                            <div class="number" id="a">
-                                <button class="bi bi-chevron-up"></button>
-                                <div class="value">${data['ideas']}</div>
-                                <button class="bi bi-chevron-down"></button>
-                            </div>
-                            <div>
-                                <h2> ${data['ideas'][i]['username']} </h2>
-                                <p> ${data['ideas'][i]} </p>
-                            </div>
-                        </li>`)
+  for(let i = 0; i < data.ideas.length; i++ ){
+    if ("currentUser" == data.ideas[i].username) {
+      html.push(`<li class="ideasBox">
+                  <div class="number" id="number">
+                      <button id="increase" class="bi bi-chevron-up increase"></button>
+                      <div class="value">${data.ideas[i].score}</div>
+                      <button id="decrease" class="bi bi-chevron-down decrease"></button>
+                  </div>
+                  <div>
+                    <div class="current-user">
+                      <h2>${data.ideas[i].username}</h2>
+                      <p class="you"> You </p>
+                      <button id="delete" class="bi bi-trash-fill" data-delete="${i}"> Delete </button>
+                      <button id="edit" class="bi bi-pen-fill delete"> Edit </button>
+                    </div>
+                      <p> ${data.ideas[i].content} </p>
+                  </div>
+              </li>  <hr>`)
+    } else {
+      html.push(`<li class="ideasBox">
+                    <div class="number" id="number">
+                        <button id="increase" class="bi bi-chevron-up increase"></button>
+                        <div class="value">${data.ideas[i].score}</div>
+                        <button id="decrease" class="bi bi-chevron-down decrease"></button>
+                    </div>
+                    <div>
+                        <h2>${data.ideas[i].username}</h2>
+                        <p> ${data.ideas[i].content} </p>
+                    </div>
+                </li>  <hr>`)
+            }
     }
-
-  $list.innerHTML = dataList.join('')
+    $list.innerHTML = html.join('')
 }
 
-console.log(data['ideas'].length);
-console.log(data['ideas'][0]['username']);
+listData()
+
+//add new Ideas to the idea form
 
 
-// const html = []
 
-// for (const datas of data){
-//     html.push(
-//         `<div>
-//             <h1>${data.username}</h1>
-//             <p>${data.content}</p>
-//         </div>`
-//     )
-// }
+//add eventListener to buttons - Delete and Edit
+const $delete = document.getElementById('delete')
 
-// ideaForum.innerHTML = html.join('')
+$delete.addEventListener("submit", function (event) {
+      console.log(event)
+})
+
+
+// //add eventListener to buttons - upvote and downvote
+const increase = document.getElementById('increase')
+const decrease = document.getElementById('decrease')

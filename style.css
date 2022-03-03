@@ -42,9 +42,8 @@ p{
 }
 
 .container{
-    margin: auto;
+    margin: 10% auto 5%;
     text-align: center;
-    margin-top: 10%;
     background-color: white;
     max-width: 85%;
     padding: 20px;
@@ -62,7 +61,6 @@ p{
     margin: 14px auto;
     text-align: left;
     display: flex;
-    /* background-color: var(--tertiary-color); */
 }
 
 input{
@@ -91,11 +89,39 @@ input{
     font-family: var(--secondary-font);
 }
  .bi{
-     background-color: var(--tertiary-color);
+     background-color: white;
      border: none;
+     font-size: 18px;
+ }
+
+
+ hr{
+     border: 1px solid rgb(230, 230, 230);
+ }
+
+ .you{
+     color: var(--secondary-color);
+     margin: 5px 14px auto;
+     font-weight: bold;
      font-size: 20px;
  }
 
+ .current-user{
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    align-items: center;
+ }
+
+ .addIdea{
+     border: none;
+     background-color: var(--secondary-color);
+     padding: 12px;
+     border-radius: 10px;
+     font-family: var(--secondary-font);
+     font-size: 14px;
+     font-weight: bold;
+ }
 
 @media screen and (min-width:1200px){
 
