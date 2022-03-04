@@ -46,8 +46,6 @@ const data = {
     ],
   }
 
-const $addIdea = document.getElementById('form');
-const $completed = document.getElementById('completed');
 const $list = document.getElementById('list');
 
 //add html dinamcally to the browser
@@ -66,8 +64,8 @@ function listData(){
                     <div class="current-user">
                       <h2>${data.ideas[i].username}</h2>
                       <p class="you"> You </p>
-                      <button id="delete" class="bi bi-trash-fill" data-delete="${i}"> Delete </button>
-                      <button id="edit" class="bi bi-pen-fill delete"> Edit </button>
+                      <button id="delete" class="bi bi-trash-fill delete" dataset="${i}"> Delete </button>
+                      <button id="edit" class="bi bi-pen-fill edit"> Edit </button>
                     </div>
                       <p> ${data.ideas[i].content} </p>
                   </div>
@@ -92,17 +90,21 @@ function listData(){
 listData()
 
 //add new Ideas to the idea form
+const $form = document.getElementById('form')
+const $content = document.getElementById('content')
 
 
 
-//add eventListener to buttons - Delete and Edit
-const $delete = document.getElementById('delete')
+$form.addEventListener('submit', function (e){
+  e.preventDefault()
+    data.ideas.push({username: 'currentUser',
+                    content: $content.value,
+                    score: '0'})
 
-$delete.addEventListener("submit", function (event) {
-      console.log(event)
+    $form.reset()
+
+    listData()
 })
 
+//add eventListener to buttons - Delete and Edit
 
-// //add eventListener to buttons - upvote and downvote
-const increase = document.getElementById('increase')
-const decrease = document.getElementById('decrease')
