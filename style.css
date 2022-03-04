@@ -33,7 +33,7 @@ h1{
 
 h2{
     font-family: var(--secondary-font);
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
 
 p{
@@ -63,12 +63,6 @@ p{
     display: flex;
 }
 
-input{
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px dashed var(--primary-color)
-}
-
 .newIdea{
     font-weight: bold;
     color: var(--secondary-color);
@@ -88,40 +82,55 @@ input{
     font-size: 20px;
     font-family: var(--secondary-font);
 }
- .bi{
-     background-color: white;
-     border: none;
-     font-size: 18px;
- }
+
+.bi{
+    background-color: white;
+    border: none;
+    font-size: 18px;
+}
 
 
- hr{
-     border: 1px solid rgb(230, 230, 230);
- }
+hr{
+    border: 1px solid rgb(230, 230, 230);
+}
 
- .you{
-     color: var(--secondary-color);
-     margin: 5px 14px auto;
-     font-weight: bold;
-     font-size: 20px;
- }
+.you{
+    color: var(--secondary-color);
+    margin: 5px 14px auto;
+    font-weight: bold;
+    font-size: 20px;
+}
 
- .current-user{
-    display: inline-flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    align-items: center;
- }
+.current-user{
+display: inline-flex;
+flex-wrap: wrap;
+max-width: 100%;
+align-items: center;
+}
 
- .addIdea{
-     border: none;
-     background-color: var(--secondary-color);
-     padding: 12px;
-     border-radius: 10px;
-     font-family: var(--secondary-font);
-     font-size: 14px;
-     font-weight: bold;
- }
+.addIdea{
+    border: none;
+    background-color: var(--secondary-color);
+    padding: 12px;
+    margin-left: 14px;
+    border-radius: 10px;
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px dashed var(--primary-color);
+    /* width: 100%; */
+
+}
+
+/* .form{
+    display: flex;
+} */
 
 @media screen and (min-width:1200px){
 

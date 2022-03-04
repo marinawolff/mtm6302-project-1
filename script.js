@@ -1,3 +1,4 @@
+//ideas property is a array of objects
 const data = {
     currentUser: 'currentUser',
     ideas: [
@@ -46,7 +47,9 @@ const data = {
     ],
   }
 
-const $list = document.getElementById('list');
+const $list = document.getElementById('list')
+const $form = document.getElementById('form')
+const $content = document.getElementById('content')
 
 //add html dinamcally to the browser
 function listData(){
@@ -64,7 +67,7 @@ function listData(){
                     <div class="current-user">
                       <h2>${data.ideas[i].username}</h2>
                       <p class="you"> You </p>
-                      <button id="delete" class="bi bi-trash-fill delete" dataset="${i}"> Delete </button>
+                      <button id="delete" class="bi bi-trash-fill delete" data-index="${i}"> Delete </button>
                       <button id="edit" class="bi bi-pen-fill edit"> Edit </button>
                     </div>
                       <p> ${data.ideas[i].content} </p>
@@ -90,10 +93,6 @@ function listData(){
 listData()
 
 //add new Ideas to the idea form
-const $form = document.getElementById('form')
-const $content = document.getElementById('content')
-
-
 
 $form.addEventListener('submit', function (e){
   e.preventDefault()
@@ -106,5 +105,34 @@ $form.addEventListener('submit', function (e){
     listData()
 })
 
-//add eventListener to buttons - Delete and Edit
+//add eventListener to Delete button
 
+$list.addEventListener('click', function (e) {
+  if (e.target.classList.contains('delete')) {
+    const index = e.target.dataset.index
+
+    data.ideas.splice(index, 1)
+
+    listData()
+  }
+})
+
+//add eventListener to Edit button
+
+// const $delete = document.getElementById('delete')
+
+// $delete.addEventListener("submit", function (event) {
+//       console.log(event)
+// })
+
+
+//add eventListener to buttons - upvote and downvote
+
+// const $increase = document.getElementById('increase')
+// const $decrease = document.getElementById('decrease')
+
+// $increase.addEventListener('click', function(e){
+//   if (e.target.classList.contains('increase')) {
+//    data.ideas.score ++
+//   }
+// })
