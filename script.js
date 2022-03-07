@@ -59,9 +59,9 @@ function listData(){
     if ("currentUser" == data.ideas[i].username) {
       html.push(`<li class="ideasBox">
                   <div class="number" id="number">
-                      <button id="increase" class="bi bi-chevron-up increase"></button>
+                      <button id="increase" class="bi bi-chevron-up increase" data-index="${i}"></button>
                       <div class="value">${data.ideas[i].score}</div>
-                      <button id="decrease" class="bi bi-chevron-down decrease"></button>
+                      <button id="decrease" class="bi bi-chevron-down decrease" data-index="${i}"></button>
                   </div>
                   <div>
                     <div class="current-user">
@@ -76,9 +76,9 @@ function listData(){
     } else {
       html.push(`<li class="ideasBox">
                     <div class="number" id="number">
-                        <button id="increase" class="bi bi-chevron-up increase"></button>
+                        <button id="increase" class="bi bi-chevron-up increase" data-index="${i}" ></button>
                         <div class="value">${data.ideas[i].score}</div>
-                        <button id="decrease" class="bi bi-chevron-down decrease"></button>
+                        <button id="decrease" class="bi bi-chevron-down decrease" data-index="${i}"></button>
                     </div>
                     <div>
                         <h2>${data.ideas[i].username}</h2>
@@ -119,20 +119,30 @@ $list.addEventListener('click', function (e) {
 
 //add eventListener to Edit button
 
-// const $delete = document.getElementById('delete')
 
-// $delete.addEventListener("submit", function (event) {
-//       console.log(event)
-// })
+
 
 
 //add eventListener to buttons - upvote and downvote
 
-// const $increase = document.getElementById('increase')
-// const $decrease = document.getElementById('decrease')
+$list.addEventListener('click', function (e){
+    if (e.target.classList.contains('increase')){
+      const index = e.target.dataset.index
 
-// $increase.addEventListener('click', function(e){
-//   if (e.target.classList.contains('increase')) {
-//    data.ideas.score ++
-//   }
-// })
+      const idea = data.ideas[index]
+
+      idea.score++
+      
+      listData()
+    }
+
+    if (e.target.classList.contains('decrease')){
+      const index = e.target.dataset.index
+
+      const idea = data.ideas[index]
+
+      idea.score--
+      
+      listData()
+    }
+})
