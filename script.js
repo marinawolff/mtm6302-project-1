@@ -50,13 +50,18 @@ const data = {
 const $list = document.getElementById('list')
 const $form = document.getElementById('form')
 const $content = document.getElementById('content')
+const $modal = document.getElementById('modal')
+const $newContent = document.getElementById('newContent')
+const $saveButton = document.getElementById('saveButton')
+const $closeButton = document.getElementById('closeButton')
+const $editForm = document.getElementById('editForm')
 
 //add html dinamcally to the browser
 function listData(){
   const html = []
 
   for(let i = 0; i < data.ideas.length; i++ ){
-    if ("currentUser" == data.ideas[i].username) {
+    if ('currentUser' == data.ideas[i].username) {
       html.push(`<li class="ideasBox">
                   <div class="number" id="number">
                       <button id="increase" class="bi bi-chevron-up increase" data-index="${i}"></button>
@@ -67,10 +72,12 @@ function listData(){
                     <div class="current-user">
                       <h2>${data.ideas[i].username}</h2>
                       <p class="you"> You </p>
-                      <button id="delete" class="bi bi-trash-fill delete" data-index="${i}"> Delete </button>
-                      <button id="edit" class="bi bi-pen-fill edit"> Edit </button>
+                      <div class="float">
+                        <button id="delete" class="bi bi-trash2-fill delete" data-index="${i}"> Delete </button>
+                        <button id="edit" class="bi bi-pen-fill" data-editindex="${i}"> Edit </button>
+                      </div>
                     </div>
-                      <p> ${data.ideas[i].content} </p>
+                    <p class="contentDisplay"> ${data.ideas[i].content} </p>
                   </div>
               </li>  <hr>`)
     } else {
@@ -82,7 +89,7 @@ function listData(){
                     </div>
                     <div>
                         <h2>${data.ideas[i].username}</h2>
-                        <p> ${data.ideas[i].content} </p>
+                        <p class="contentDisplay"> ${data.ideas[i].content} </p>
                     </div>
                 </li>  <hr>`)
             }
@@ -119,8 +126,37 @@ $list.addEventListener('click', function (e) {
 
 //add eventListener to Edit button
 
+$list.addEventListener('click', function (e){
+  if (e.target.dataset.editindex !== undefined){
+    const editIdea = data.ideas[e.target.dataset.editindex]
+  
+    $newContent.value = editIdea.content
 
+    $saveButton.dataset.editindex = e.target.dataset.editindex
 
+    $modal.style.display = 'block'
+  }
+})
+
+$saveButton.addEventListener('click', function (){
+  const newContent = $newContent.value
+
+  const editIndex = $saveButton.dataset.editindex
+
+  data.ideas[editIndex].content = newContent
+
+  listData()
+
+  $editForm.reset()
+
+  $modal.style.display = 'none'
+})
+
+// add eventListener to close button of the Edit Form
+
+$closeButton.addEventListener('click', function(){
+  $modal.style.display = 'none'
+})
 
 
 //add eventListener to buttons - upvote and downvote

@@ -21,16 +21,33 @@
         <div class="IdeaContainer">
             <form class="form" id="form"> 
                 <h2 class="newIdea"> New Idea </h2>
-                <input type="text" id="content" name="task" class="form-control" placeholder="Create a new idea...">
+                <textarea type="text" id="content" name="task" class="form-control" placeholder="Create a new idea..."></textarea>
                 <button class="addIdea" id="addIdea" > Add Idea </button>
             </form>
+            <div class="test">
+                <ul id="list" class="list-group">
 
-            <ul id="list" class="list-group">
-
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
-    
+
+    <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2> Edit your idea </h2>
+                    <button id="closeButton" class="bi bi-x-lg closeButton"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <textarea type="text" id="newContent" name="task" class="form-control"></textarea>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="saveButton" class="saveButton"> Save </button>
+                </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
