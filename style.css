@@ -140,27 +140,24 @@ textarea{
     margin: 14px auto 2px;
 }
 
-/* #delete{
-    margin-right: 14px;
-    margin-left: 6px;;
-    margin-top: 10px;
-    margin-bottom: 10px;
+#delete{
+    margin: 10px 6px 0px 0px;
     font-size: 16px;
+    color: grey;
 }
 
 #delete:hover{
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 4px;
-    border-radius: 10px;
+    color: #b9481c;
+}
+
+#edit{
+    font-size: 16px;
+    color: grey;
 }
 
 #edit:hover{
-    background-color: var(--primary-color);
-    color: white;
-    padding: 4px;
-    border-radius: 10px;
-} */
+    color: #079b82;
+}
 
 /* Edit Modal */
 
@@ -197,6 +194,15 @@ textarea{
 .form{
     margin-left: 10px ;
 }
+
+@media screen and (min-width:620px){
+    #delete{
+        margin-right: 14px;
+        margin-left: 30px;
+        margin-top: 2px;
+    }
+}
+
 
 @media screen and (min-width:1200px){
 
