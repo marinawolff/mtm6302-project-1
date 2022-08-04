@@ -43,7 +43,7 @@ p{
 .container{
     margin: 10% auto 5%;
     text-align: center;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     max-width: 85%;
     padding: 20px;
     border-radius: 15px;
@@ -83,7 +83,7 @@ p{
 }
 
 .bi{
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     border: none;
     font-size: 18px;
 }

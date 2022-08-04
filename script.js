@@ -104,8 +104,8 @@ listData()
 $form.addEventListener('submit', function (e){
   e.preventDefault()
     data.ideas.unshift({username: 'currentUser',
-                    content: $content.value,
-                    score: '0'})
+                      content: $content.value,
+                      score: '0'})
 
     $form.reset()
 
