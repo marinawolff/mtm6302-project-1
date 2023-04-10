@@ -3,45 +3,45 @@ const data = {
     currentUser: 'currentUser',
     ideas: [
       {
-        username: 'amyrobson',
+        username: 'Isaac Patel',
         content:
-          'Non dolor veniam nostrud ad. Commodo ex officia reprehenderit eu laborum. Qui reprehenderit reprehenderit incididunt eiusmod voluptate cupidatat cupidatat dolor. Incididunt sint cupidatat dolore cupidatat ut do dolor nostrud ullamco aliqua aliqua excepteur. Fugiat nostrud esse voluptate magna nostrud nostrud sint et. Irure excepteur irure ullamco occaecat dolor deserunt. Cillum fugiat sunt ullamco ad enim ea eiusmod do et dolor adipisicing mollit aliqua mollit.\r\n',
+          'Create a travel planning and design service that helps busy entrepreneurs plan and design their trips. You can offer customized itineraries that cater to their specific needs and preferences, as well as recommendations for the best places to stay, eat, and explore.\r\n',
         score: 3,
       },
       {
-        username: 'maxblagun',
+        username: 'Alexander Wong',
         content:
-          'Cupidatat veniam quis aliquip ut pariatur excepteur ut. Cupidatat reprehenderit nulla laborum dolore nulla voluptate cupidatat in. Sint tempor non duis sit deserunt culpa sunt labore eu sit consectetur. Excepteur reprehenderit et officia incididunt consectetur laborum consequat laboris excepteur ea adipisicing qui.\r\n',
+          'Start a company that specializes in designing and manufacturing sustainable travel accessories, such as eco-friendly luggage, reusable water bottles, and travel-sized toiletries. You can market your products to environmentally-conscious travelers who want to reduce their carbon footprint.\r\n',
         score: 10,
       },
       {
-        username: 'maxblagun',
+        username: 'Alexander Wong',
         content:
-          'Proident qui elit in deserunt velit eu veniam. Tempor velit cillum et dolore. Incididunt anim Lorem Lorem dolor voluptate deserunt cillum consequat ut. Ea fugiat culpa ex et pariatur dolor est officia ea dolore ullamco mollit. Cillum minim consequat ipsum deserunt velit mollit ad consectetur irure dolore proident qui.\r\n',
+          'Launch a design firm that specializes in creating immersive and interactive experiences for travelers. You can work with tourism boards and hospitality companies to design attractions, exhibits, and events that showcase the local culture and history.\r\n',
         score: 6,
       },
       {
-        username: 'maxblagun',
+        username: 'Maya Singh',
         content:
-          'Officia exercitation cupidatat enim sint ea quis reprehenderit ipsum. Commodo ullamco deserunt reprehenderit qui in anim aliqua officia do in reprehenderit Lorem. Ipsum non aute officia est nisi sunt non. Proident in eiusmod sint aliquip qui officia deserunt eiusmod sit. Mollit voluptate anim cillum cupidatat duis est ad excepteur consequat fugiat cillum velit esse. Quis dolore sit ullamco qui.\r\n',
+          'Build a mobile app that connects travelers with local entrepreneurs who offer unique and authentic travel experiences. The app can feature a directory of local artisans, chefs, and guides who can provide personalized tours, cooking classes, and other experiences that go beyond the typical tourist attractions.\r\n',
         score: 8,
       },
       {
         username: 'currentUser',
         content:
-          'Incididunt ut ut velit dolor irure Lorem ex nostrud et laborum commodo dolore laborum culpa. Adipisicing ullamco eu id sit velit ut laboris irure esse quis. Mollit minim laborum do exercitation sint magna ea ea eu eu laboris aliquip anim culpa. Consectetur eiusmod esse ipsum incididunt duis ea nisi qui duis pariatur.\r\n',
+          'Create a line of travel-inspired clothing and accessories that combines function and style. You can design products that are both practical and fashionable, such as convertible jackets, multi-purpose bags, and wrinkle-resistant fabrics.\r\n',
         score: 3,
       },
       {
         username: 'currentUser',
         content:
-          'Id aute eu quis tempor laborum duis nostrud proident nostrud culpa est ad. Do dolor cillum ullamco excepteur eiusmod laboris dolore do Lorem. Exercitation eiusmod laborum enim culpa esse.\r\n',
+          'Develop a web-based platform that connects entrepreneurs who need design services with freelance designers who specialize in travel-related projects. You can offer a range of services, such as logo design, website design, and social media graphics.\r\n',
         score: 1,
       },
       {
-        username: 'amyrobson',
+        username: 'Maya Singh',
         content:
-          'In magna cupidatat ipsum exercitation incididunt non eu amet occaecat et sint irure consequat. Sunt labore incididunt ut culpa aliquip excepteur est. Enim Lorem dolor adipisicing veniam proident quis ad laborum in commodo qui. Proident elit ullamco aliqua non excepteur in fugiat consequat adipisicing ut eu id sunt laboris.\r\n',
+          'Launch a boutique hotel chain that combines stylish design with sustainable practices. You can source local materials and work with local artisans to create unique and eco-friendly accommodations that appeal to design-savvy travelers.\r\n',
         score: 7,
       },
     ],

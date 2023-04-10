@@ -5,9 +5,9 @@
 }
 
 :root {
-    --primary-color: #4CA092;
-    --secondary-color: #D8A18B ;
-    --tertiary-color: #A4D3C1 ;
+    --primary-color: #2e2e2e;
+    --secondary-color: #eb7c1b ;
+    --tertiary-color: #2e2e2e ;
 
     --primary-font: 'Amatic SC', Helvetica, sans-serif; 
     --secondary-font: 'Candara' , Helvetica, sans-serif
@@ -19,9 +19,12 @@ img{
 }
 
 html{
-    background-image: url(/assets/background.jpg);
-    background-repeat: repeat-y;
+    /* background-image: url(/assets/bg.png);
+    background-repeat: no-repeat;
     background-size:100% auto;
+    height: 100%;
+    background-position: top; */
+    background-image: linear-gradient(#F2994A, #F2C94C );
 
 }
 
@@ -43,11 +46,11 @@ p{
 .container{
     margin: 10% auto 5%;
     text-align: center;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(245, 245, 245);
     max-width: 85%;
-    padding: 20px;
+    padding: 3%;
     border-radius: 15px;
-    box-shadow: 8px 8px var(--tertiary-color);
+    box-shadow: 10px 10px 50px #3131318a;
 }
 
 .IdeaContainer{
